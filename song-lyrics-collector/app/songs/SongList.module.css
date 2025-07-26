@@ -1,0 +1,91 @@
+.container {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: 32px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #f9f5f5;
+}
+
+.songList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.songList li {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.5s ease forwards;
+  animation-delay: calc(var(--i) * 0.1s);
+  transform: translateY(20px);
+  opacity: 0;
+  position: relative;
+}
+
+.songList li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.songList a {
+  text-decoration: none;
+  color: #0e0e0e;
+  font-weight: 600;
+  font-size: 18px;
+  display: block;
+  word-wrap: break-word;
+}
+
+.songList a:hover {
+  color: #0070f3;
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Three-dot delete button */
+.deleteButton {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: #555;
+  padding: 0;
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.deleteButton:hover {
+  color: #ff4d4f;
+}
+.pageBackground {
+  min-height: 100vh;
+  background-image: url('https://i.pinimg.com/736x/04/05/7c/04057c142fe949743fdb6167008ac93c.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 2rem 0;
+}
+

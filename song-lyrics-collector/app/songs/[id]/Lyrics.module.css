@@ -1,0 +1,140 @@
+/* Lyrics.module.css */
+
+.spotifyContainer {
+  display: flex;
+  align-items: flex-start;
+  background: linear-gradient(135deg, #181818 60%, #282828 100%);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  padding: 32px;
+  color: #fff;
+  max-width: 900px;
+  margin: 40px auto;
+  gap: 32px;
+  transition: transform 0.3s ease;
+}
+
+.spotifyContainer:hover {
+  transform: scale(1.01);
+}
+
+.albumArt img,
+.albumImage {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  background: #222;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.albumImage:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+}
+
+.songInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.songTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+  color: #1db954;
+}
+
+.songArtist,
+.songAlbum {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin: 0;
+}
+
+.lyricsContainer {
+  margin-top: 24px;
+  background: rgba(186, 183, 183, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.lyricsContainer h3 {
+  color: #1db954;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.5rem;
+}
+
+.lyricsContent {
+  white-space: pre-line;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  line-height: 1.8;
+  color: #f0f0f0;
+  font-size: 1.1rem;
+}
+
+.lyricLine {
+  margin: 0 0 4px 0;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.lyricLine:hover {
+  color: #1db954;
+  opacity: 1;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: #1db954;
+  font-size: 1.2rem;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.errorContainer {
+  text-align: center;
+  padding: 2rem;
+  color: #ff4d4f;
+  background: rgba(255, 77, 79, 0.1);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 77, 79, 0.2);
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.backButton {
+  margin-top: 2rem;
+  padding: 0.6rem 1.6rem;
+  background: #1db954;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.backButton:hover {
+  background: #1ed760;
+  transform: translateY(-2px);
+}
+
+.noLyrics {
+  color: #999;
+  font-style: italic;
+  text-align: center;
+  padding: 1.5rem 0;
+}
